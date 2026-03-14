@@ -15,6 +15,7 @@ import android.net.wifi.rtt.RangingRequest;
 import android.net.wifi.rtt.RangingResult;
 import android.net.wifi.rtt.RangingResultCallback;
 import android.net.wifi.rtt.WifiRttManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -67,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
         this.message = "WIFI MANAGER TEST\n\n";
         textView.setText(this.message);
         print("*** EXPERIMENT STARTED ***");
+        print("Device manufacturer: " + Build.MANUFACTURER);
+        print("Device model: " + Build.MODEL);
+        print("Device SDK version: " + Build.VERSION.SDK_INT);
         checkForPermissions();
         print("RTT available? " + mWifiRttManager.isAvailable());
         print("Starting WiFi scan...");

@@ -1,0 +1,1 @@
+A minimal Android app to check MC/AZ RTT capabilities
